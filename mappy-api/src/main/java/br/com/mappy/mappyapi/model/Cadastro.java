@@ -2,7 +2,7 @@ package br.com.mappy.mappyapi.model;
 
 import java.util.Scanner;
 
-public abstract class Cadastro {
+public class Cadastro {
 
     private String nome;
     private String email;
@@ -58,7 +58,6 @@ public abstract class Cadastro {
         this.categoriaUsuario = categoriaUsuario;
     }
 
-    public abstract void fazerAvaliação();
 
     public void confirmarSenha() {
         System.out.println("Confirme a senha!");
