@@ -6,6 +6,7 @@ import br.com.mappy.mappyapi.model.Cuidador;
 import br.com.mappy.mappyapi.model.Atipico;
 import br.com.mappy.mappyapi.model.Cadastro;
 import br.com.mappy.mappyapi.model.Forum;
+import br.com.mappy.mappyapi.model.Local;
 
 
 // Esta classe simula um SGDB. Coloque onde ficará os dados aqui!
@@ -14,12 +15,18 @@ public class Database {
     private ArrayList<Cadastro> cadastro;
     private ArrayList<Atipico> atipico;
     private ArrayList<Cuidador> cuidador;
+    private ArrayList<Local> local;
+
+    public ArrayList<Local> getLocal() {
+        return local;
+    }
     
     public Database() {
         forum = new ArrayList<>();
         cadastro = new ArrayList<>();
         atipico = new ArrayList<>();
         cuidador = new ArrayList<>();
+        local = new ArrayList<>();
     }
 
     public void init(){
@@ -30,6 +37,11 @@ public class Database {
         cadastro.add(new Cadastro("Nycole", "nycole.b@gmail.com", "Importância", "1234", "deficiente visual"));
         cadastro.add(new Cadastro("Thiago", "thiago.p@gmail.com", "Rotina", "1234", "deficiente auditivo"));
         cadastro.add(new Cadastro("Eder", "eder.g@gmail.com", "Acessibilidade", "1234", "deficiente mental"));
+
+        local.add(new Local("Escola", "IFSP", "Rua A", "Ensino de qualidade"));
+        local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel"));
+        local.add(new Local("Saúde", "Husf", "Rua C", "Hospital de qualidade"));
+
     }
 
     public void addDadoForum(Forum novoForum){
@@ -79,5 +91,17 @@ public class Database {
 
     public void delDadoCuidador(Cuidador delCuidador){
         cuidador.remove(delCuidador);
+    } 
+
+    public void addDadoLocal(Local novoLocal){
+        local.add(novoLocal);
+    }
+
+    public ArrayList<Local> recuperaDadoLocal(){
+        return local;    
+    }
+
+    public void delDadoLocal(Local delLocal){
+        local.remove(delLocal);
     } 
 }
