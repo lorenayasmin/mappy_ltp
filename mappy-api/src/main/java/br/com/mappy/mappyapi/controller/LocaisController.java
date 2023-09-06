@@ -11,4 +11,10 @@ public class LocaisController {
     public static void main(String[] args) {
         SpringApplication.run(LocaisController.class, args);
     }
+
+    @GetMapping("/api/locais")
+    String locais() {
+        return ;
+    }
+
 }

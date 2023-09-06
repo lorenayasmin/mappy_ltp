@@ -56,8 +56,9 @@ public class Database {
         atipico.remove(delAtipico);
     }
 
-    public void addDadoCadastro(Cadastro novoCadastro) {
+    public Cadastro addDadoCadastro(Cadastro novoCadastro) {
         cadastro.add(novoCadastro);
+        return novoCadastro;
     }
 
     public ArrayList<Cadastro> recuperaDadoCadastro(){

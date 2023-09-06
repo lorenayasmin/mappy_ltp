@@ -58,6 +58,9 @@ public class Cadastro {
         this.categoriaUsuario = categoriaUsuario;
     }
 
+    public void fazerAvaliação(){
+        
+    }
 
     public void confirmarSenha() {
         System.out.println("Confirme a senha!");
