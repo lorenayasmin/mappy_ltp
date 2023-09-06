@@ -21,6 +21,9 @@ public class Database {
         return local;
     }
     
+    public ArrayList<Forum> getPostagem() {
+        return forum;
+    }
     public Database() {
         forum = new ArrayList<>();
         cadastro = new ArrayList<>();
