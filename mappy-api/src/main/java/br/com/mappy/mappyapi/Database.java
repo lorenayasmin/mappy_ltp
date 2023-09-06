@@ -24,6 +24,11 @@ public class Database {
     public ArrayList<Forum> getPostagem() {
         return forum;
     }
+
+    public ArrayList<Forum> getPostagem1() {
+        return forum;
+    }
+
     public Database() {
         forum = new ArrayList<>();
         cadastro = new ArrayList<>();
@@ -47,8 +52,9 @@ public class Database {
 
     }
 
-    public void addDadoForum(Forum novoForum){
+    public Forum addDadoForum(Forum novoForum){
         forum.add(novoForum);
+        return novoForum;
     }
 
     public ArrayList<Forum> recuperaDadoForum(){
@@ -84,7 +90,7 @@ public class Database {
         cadastro.remove(delCadastro);
     }
 
-    public void addDadoForum(Cuidador novoCuidador){
+    public void addDadoCuidador(Cuidador novoCuidador){
         cuidador.add(novoCuidador);
     }
 
