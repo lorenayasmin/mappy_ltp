@@ -45,9 +45,9 @@ public class Database {
     }
 
     public void init(){
-        forum.add(new Forum("blablabla", "25/09/2022", "Importância", "Nycoly"));
-        forum.add(new Forum("blablabla", "07/04/2023", "Rotina", "Lorena"));
-        forum.add(new Forum("blablabla", "18/05/2023", "Acessibilidade", "Victória"));
+        forum.add(new Forum("blablabla", "25/09/2022", "Importância", "Nycoly", 1));
+        forum.add(new Forum("blablabla", "07/04/2023", "Rotina", "Lorena", 2));
+        forum.add(new Forum("blablabla", "18/05/2023", "Acessibilidade", "Victória", 3));
        
         cadastro.add(new Cadastro("Nycole", "nycole.b@gmail.com", "Importância", "1234", "deficiente visual"));
         cadastro.add(new Cadastro("Thiago", "thiago.p@gmail.com", "Rotina", "1234", "deficiente auditivo"));
@@ -70,6 +70,14 @@ public class Database {
 
     public ArrayList<Forum> recuperaDadoForum(){
         return forum;    
+    }
+
+    public ArrayList<Forum> recuperaDadoIdPostagem(){
+        return getPostagem(0);    
+    }
+
+    private ArrayList<Forum> getPostagem(int i) {
+        return null;
     }
 
     public void delDadoForum(Forum delForum){

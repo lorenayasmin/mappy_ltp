@@ -58,4 +58,12 @@ public class LocaisController {
         return LocalDAO.getInstance().getById(idLocal);
     }
 
+    Database local3 = new Database();
+    ArrayList<Local> listaNovaLocais = local3.getLocal();
+  
+    @PutMapping("/api/locais")
+    ArrayList locais4() {
+      return listaLocais;
+    }
+
 }

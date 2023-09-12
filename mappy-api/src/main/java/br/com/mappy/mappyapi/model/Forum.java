@@ -8,13 +8,15 @@ public class Forum implements Apresentavel{
     private String dataPostagem;
     private String tituloPostagem;
     private String responsavelPostagem;
-    
-    public Forum(String conteudoPostagem, String dataPostagem, String tituloPostagem,
-            String responsavelPostagem) {
+    private int IdPostagem;   
+
+    public Forum(String conteudoPostagem, String dataPostagem, String tituloPostagem, String responsavelPostagem,
+            int idPostagem) {
         this.conteudoPostagem = conteudoPostagem;
         this.dataPostagem = dataPostagem;
         this.tituloPostagem = tituloPostagem;
         this.responsavelPostagem = responsavelPostagem;
+        IdPostagem = idPostagem;
     }
 
     @Override

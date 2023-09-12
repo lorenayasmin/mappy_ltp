@@ -45,4 +45,11 @@ public class ForumDAO {
     public void update(Forum toUpdate){
         // Sem implementação
     }
+
+    public ArrayList<Forum> getById(Integer idPostagem) {
+        Database db = getConnection();
+        ArrayList<Forum> PostagemRecebida = db.recuperaDadoIdPostagem();
+        return db.recuperaDadoForum();
+    
+    }
 }
