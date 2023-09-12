@@ -53,9 +53,9 @@ public class Database {
         cadastro.add(new Cadastro("Thiago", "thiago.p@gmail.com", "Rotina", "1234", "deficiente auditivo"));
         cadastro.add(new Cadastro("Eder", "eder.g@gmail.com", "Acessibilidade", "1234", "deficiente mental"));
 
-        local.add(new Local("Escola", "IFSP", "Rua A", "Ensino de qualidade"));
-        local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel"));
-        local.add(new Local("Saúde", "Husf", "Rua C", "Hospital de qualidade"));
+        local.add(new Local("Escola", "IFSP", "Rua A", "Ensino de qualidade", 1));
+        local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel",2));
+        local.add(new Local("Saúde", "Husf", "Rua C", "Hospital de qualidade",3));
 
         avaliacoes.add(new Avaliacoes("Local muito bom", "4 estrelas"));
         avaliacoes.add(new Avaliacoes("Muito acessivel", "5 estrelas"));
@@ -122,12 +122,21 @@ public class Database {
         return local;    
     }
 
+    public ArrayList<Local> recuperaDadoIdLocal(){
+        return getLocal(0);    
+    }
+
+    private ArrayList<Local> getLocal(int i) {
+        return null;
+    }
+
     public void delDadoLocal(Local delLocal){
         local.remove(delLocal);
     } 
 
-    public void addDadoAvaliacoes(Avaliacoes novoAvaliacoes){
+    public Avaliacoes addDadoAvaliacoes(Avaliacoes novoAvaliacoes){
         avaliacoes.add(novoAvaliacoes);
+        return novoAvaliacoes;
     }
 
     public ArrayList<Avaliacoes> recuperaDadoAvaliacoes(){

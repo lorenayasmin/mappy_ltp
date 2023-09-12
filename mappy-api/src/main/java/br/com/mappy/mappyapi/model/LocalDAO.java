@@ -46,5 +46,12 @@ public class LocalDAO {
     public void update(Local toUpdate){
         // Sem implementação
     }
+
+    public ArrayList<Local> getById(Integer idLocal) {
+        Database db = getConnection();
+        ArrayList<Local> localRecebido = db.recuperaDadoIdLocal();
+        return db.recuperaDadoLocal();
+    
+    }
     
 }

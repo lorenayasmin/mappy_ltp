@@ -8,14 +8,19 @@ public class Local {
     private String nomeLocal;
     private String endereco;
     private String descricao;
+    private int idLocal;
     
-    public Local(String categoriaLocal, String nomeLocal, String endereco, String descricao) {
+    
+    public Local(String categoriaLocal, String nomeLocal, String endereco, String descricao, int idLocal) {
         this.categoriaLocal = categoriaLocal;
         this.nomeLocal = nomeLocal;
         this.endereco = endereco;
         this.descricao = descricao;
+        this.idLocal = idLocal;
     }
-    
+
+
+
     public void adicionarLocal() {
         Scanner ler = new Scanner(System.in);
         System.out.println("Adicione um local!");
