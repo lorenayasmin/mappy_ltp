@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import br.com.mappy.mappyapi.model.Cuidador;
 import br.com.mappy.mappyapi.model.Atipico;
+import br.com.mappy.mappyapi.model.Avaliacoes;
 import br.com.mappy.mappyapi.model.Cadastro;
 import br.com.mappy.mappyapi.model.Forum;
 import br.com.mappy.mappyapi.model.Local;
@@ -16,6 +17,7 @@ public class Database {
     private ArrayList<Atipico> atipico;
     private ArrayList<Cuidador> cuidador;
     private ArrayList<Local> local;
+    private ArrayList<Avaliacoes> avaliacoes;
 
     public ArrayList<Local> getLocal() {
         return local;
@@ -29,12 +31,17 @@ public class Database {
         return forum;
     }
 
+    public ArrayList<Avaliacoes> getAvaliacoes() {
+        return avaliacoes;
+    }
+
     public Database() {
         forum = new ArrayList<>();
         cadastro = new ArrayList<>();
         atipico = new ArrayList<>();
         cuidador = new ArrayList<>();
         local = new ArrayList<>();
+        avaliacoes = new ArrayList<>();
     }
 
     public void init(){
@@ -49,6 +56,10 @@ public class Database {
         local.add(new Local("Escola", "IFSP", "Rua A", "Ensino de qualidade"));
         local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel"));
         local.add(new Local("Saúde", "Husf", "Rua C", "Hospital de qualidade"));
+
+        avaliacoes.add(new Avaliacoes("Local muito bom", "4 estrelas"));
+        avaliacoes.add(new Avaliacoes("Muito acessivel", "5 estrelas"));
+        avaliacoes.add(new Avaliacoes("Adorei este lugar", "4 estrelas"));
 
     }
 
@@ -102,8 +113,9 @@ public class Database {
         cuidador.remove(delCuidador);
     } 
 
-    public void addDadoLocal(Local novoLocal){
+    public Local addDadoLocal(Local novoLocal){
         local.add(novoLocal);
+        return novoLocal;
     }
 
     public ArrayList<Local> recuperaDadoLocal(){
@@ -112,5 +124,17 @@ public class Database {
 
     public void delDadoLocal(Local delLocal){
         local.remove(delLocal);
+    } 
+
+    public void addDadoAvaliacoes(Avaliacoes novoAvaliacoes){
+        avaliacoes.add(novoAvaliacoes);
+    }
+
+    public ArrayList<Avaliacoes> recuperaDadoAvaliacoes(){
+        return avaliacoes;    
+    }
+
+    public void delDadoAvaliacoes(Avaliacoes delAvaliacoes){
+        avaliacoes.remove(delAvaliacoes);
     } 
 }

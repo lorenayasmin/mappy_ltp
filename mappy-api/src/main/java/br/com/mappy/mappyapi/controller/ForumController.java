@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mappy.mappyapi.Database;
-import br.com.mappy.mappyapi.model.Cadastro;
+import br.com.mappy.mappyapi.model.Avaliacoes;
 import br.com.mappy.mappyapi.model.Forum;
-import br.com.mappy.mappyapi.model.Local;
 
 @RestController
 public class ForumController {
@@ -47,4 +46,5 @@ public class ForumController {
   public String deleteForum() {
     return del1 + "A postagem foi deletada";
   }
+
 }
