@@ -26,7 +26,7 @@ public class ForumController {
   }
 
   Database novoForum = new Database();
-  Forum postagem2 = novoForum.addDadoForum(new Forum(null, null, null, null));
+  Forum postagem2 = novoForum.addDadoForum(new Forum(null, null, null, null, 0));
 
   @PostMapping("/api/forum/postagens/{id_postagem}")
   public String novoForum() {

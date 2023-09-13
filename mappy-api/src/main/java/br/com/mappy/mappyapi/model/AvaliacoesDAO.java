@@ -47,4 +47,11 @@ public class AvaliacoesDAO {
         // Sem implementação
     }
 
+    public ArrayList<Avaliacoes> getById(Integer idAvaliacao) {
+        Database db = getConnection();
+        ArrayList<Avaliacoes> AvaliacaoRecebida = db.recuperaDadoIdAvaliacao();
+        return db.recuperaDadoAvaliacoes();
+    
+    }
+
 }

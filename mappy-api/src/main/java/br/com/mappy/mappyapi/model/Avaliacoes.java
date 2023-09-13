@@ -6,10 +6,13 @@ public class Avaliacoes implements Apresentavel {
 
     private String comentario;
     private String notaCategoria;
+    private int idAvaliacao;
     
-    public Avaliacoes(String comentario, String notaCategoria) {
+
+    public Avaliacoes(String comentario, String notaCategoria, int idAvaliacao) {
         this.comentario = comentario;
         this.notaCategoria = notaCategoria;
+        this.idAvaliacao = idAvaliacao;
     }
 
     @Override

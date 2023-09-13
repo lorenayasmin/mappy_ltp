@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mappy.mappyapi.Database;
 import br.com.mappy.mappyapi.model.Avaliacoes;
+import br.com.mappy.mappyapi.model.AvaliacoesDAO;
 import br.com.mappy.mappyapi.model.Local;
 import br.com.mappy.mappyapi.model.LocalDAO;
 
@@ -29,12 +30,9 @@ public class LocaisController {
         return listaLocais;
     }
 
-    Database avaliacao1 = new Database();
-    ArrayList<Avaliacoes> listaAvaliacoes = avaliacao1.getAvaliacoes();
-
     @PutMapping("/api/locais/avaliacoes/{id_local}")
-    ArrayList avaliacoes() {
-        return listaAvaliacoes;
+    ArrayList<Avaliacoes> avaliacoes(@PathVariable("id_local") Integer idAvaliacao ) {
+        return AvaliacoesDAO.getInstance().getById(idAvaliacao);
     }
 
     Database novoLocal = new Database();
