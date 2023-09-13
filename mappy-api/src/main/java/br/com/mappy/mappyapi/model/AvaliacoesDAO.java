@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import br.com.mappy.mappyapi.Database;
 
 public class AvaliacoesDAO {
-    
+
     private Database db;
     private static AvaliacoesDAO instance;
 
-    public Database getConnection(){
-        if(this.db == null){
+    public Database getConnection() {
+        if (this.db == null) {
             Database db = new Database();
             db.init();
             this.db = db;
@@ -18,32 +18,32 @@ public class AvaliacoesDAO {
         return this.db;
     }
 
-    public static AvaliacoesDAO getInstance(){
-        if(instance == null){
+    public static AvaliacoesDAO getInstance() {
+        if (instance == null) {
             instance = new AvaliacoesDAO();
         }
         return instance;
     }
-    
-    //cria uma nova avaliação
-    public void create(Avaliacoes novoAvaliacoes){
+
+    // cria uma nova avaliação
+    public void create(Avaliacoes novoAvaliacoes) {
         Database db = getConnection();
         db.addDadoAvaliacoes(novoAvaliacoes);
     }
 
-    //recupera todas as avaliações
-    public ArrayList<Avaliacoes> read(){
+    // recupera todas as avaliações
+    public ArrayList<Avaliacoes> read() {
         Database db = getConnection();
         return db.recuperaDadoAvaliacoes();
     }
 
     // remove um item da avaliação
-    public void delete(Avaliacoes delAvaliacoes){
+    public void delete(Avaliacoes delAvaliacoes) {
         Database db = getConnection();
         db.delDadoAvaliacoes(delAvaliacoes);
     }
 
-    public void update(Avaliacoes toUpdate){
+    public void update(Avaliacoes toUpdate) {
         // Sem implementação
     }
 
@@ -51,7 +51,7 @@ public class AvaliacoesDAO {
         Database db = getConnection();
         ArrayList<Avaliacoes> AvaliacaoRecebida = db.recuperaDadoIdAvaliacao();
         return db.recuperaDadoAvaliacoes();
-    
+
     }
 
 }

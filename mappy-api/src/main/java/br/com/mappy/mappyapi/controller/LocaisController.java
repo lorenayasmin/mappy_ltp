@@ -22,46 +22,35 @@ public class LocaisController {
         SpringApplication.run(LocaisController.class, args);
     }
 
-    Database local1 = new Database();
-    ArrayList<Local> listaLocais = local1.getLocal();
-
     @GetMapping("/api/locais")
     ArrayList locais() {
-        return listaLocais;
+        return LocalDAO.listaLocais;
     }
 
     @PutMapping("/api/locais/avaliacoes/{id_local}")
-    ArrayList<Avaliacoes> avaliacoes(@PathVariable("id_local") Integer idAvaliacao ) {
+    ArrayList<Avaliacoes> avaliacoes(@PathVariable("id_local") Integer idAvaliacao) {
         return AvaliacoesDAO.getInstance().getById(idAvaliacao);
     }
 
-    Database novoLocal = new Database();
-    Local local2 = novoLocal.addDadoLocal(new Local(null, null, null, null, 0));
-
     @PostMapping("/api/locais")
     public String novoLocal() {
-        return local2 + "O novo local foi adicionado com sucesso";
+        return LocalDAO.local2 + "O novo local foi adicionado com sucesso";
     }
 
-    Database novoAvaliacoes = new Database();
-    Avaliacoes avaliacao2 = novoAvaliacoes.addDadoAvaliacoes(null);
 
     @PostMapping("/api/locais/avaliacoes/{id_local}")
-    public String avaliacao(){
-        return  avaliacao2 + "Sua avaliação foi realizada com sucesso";
+    public String avaliacao() {
+        return LocalDAO.avaliacao2 + "Sua avaliação foi realizada com sucesso";
     }
 
     @GetMapping("/api/locais/{id_local}")
-    ArrayList<Local> locais(@PathVariable("id_local") Integer idLocal ) {
+    ArrayList<Local> locais(@PathVariable("id_local") Integer idLocal) {
         return LocalDAO.getInstance().getById(idLocal);
     }
 
-    Database local3 = new Database();
-    ArrayList<Local> listaNovaLocais = local3.getLocal();
-  
     @PutMapping("/api/locais")
     ArrayList locais4() {
-      return listaLocais;
+        return LocalDAO.listaLocais;
     }
 
 }

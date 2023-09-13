@@ -2,13 +2,13 @@ package br.com.mappy.mappyapi.model;
 
 import java.util.Scanner;
 
-public class Forum implements Apresentavel{
+public class Forum implements Apresentavel {
 
     private String conteudoPostagem;
     private String dataPostagem;
     private String tituloPostagem;
     private String responsavelPostagem;
-    private int IdPostagem;   
+    private int IdPostagem;
 
     public Forum(String conteudoPostagem, String dataPostagem, String tituloPostagem, String responsavelPostagem,
             int idPostagem) {
@@ -33,7 +33,4 @@ public class Forum implements Apresentavel{
         return resposta;
     }
 
-    
-
-    
 }

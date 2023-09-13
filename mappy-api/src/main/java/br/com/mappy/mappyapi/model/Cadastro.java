@@ -10,7 +10,7 @@ public class Cadastro {
     private String senha;
     private String categoriaUsuario;
     private int idCadastro;
-    
+
     public Cadastro(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario,
             int idCadastro) {
         this.nome = nome;
@@ -61,8 +61,8 @@ public class Cadastro {
         this.categoriaUsuario = categoriaUsuario;
     }
 
-    public void fazerAvaliação(){
-        
+    public void fazerAvaliação() {
+
     }
 
     public void confirmarSenha() {

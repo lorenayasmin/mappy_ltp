@@ -9,7 +9,6 @@ import br.com.mappy.mappyapi.model.Cadastro;
 import br.com.mappy.mappyapi.model.Forum;
 import br.com.mappy.mappyapi.model.Local;
 
-
 // Esta classe simula um SGDB. Coloque onde ficará os dados aqui!
 public class Database {
     private ArrayList<Forum> forum;
@@ -22,7 +21,7 @@ public class Database {
     public ArrayList<Local> getLocal() {
         return local;
     }
-    
+
     public ArrayList<Forum> getPostagem() {
         return forum;
     }
@@ -44,18 +43,18 @@ public class Database {
         avaliacoes = new ArrayList<>();
     }
 
-    public void init(){
+    public void init() {
         forum.add(new Forum("blablabla", "25/09/2022", "Importância", "Nycoly", 1));
         forum.add(new Forum("blablabla", "07/04/2023", "Rotina", "Lorena", 2));
         forum.add(new Forum("blablabla", "18/05/2023", "Acessibilidade", "Victória", 3));
-       
+
         cadastro.add(new Cadastro("Nycole", "nycole.b@gmail.com", "Importância", "1234", "deficiente visual", 1));
         cadastro.add(new Cadastro("Thiago", "thiago.p@gmail.com", "Rotina", "1234", "deficiente auditivo", 2));
         cadastro.add(new Cadastro("Eder", "eder.g@gmail.com", "Acessibilidade", "1234", "deficiente mental", 3));
 
         local.add(new Local("Escola", "IFSP", "Rua A", "Ensino de qualidade", 1));
-        local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel",2));
-        local.add(new Local("Saúde", "Husf", "Rua C", "Hospital de qualidade",3));
+        local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel", 2));
+        local.add(new Local("Saúde", "Husf", "Rua C", "Hospital de qualidade", 3));
 
         avaliacoes.add(new Avaliacoes("Local muito bom", "4 estrelas", 1));
         avaliacoes.add(new Avaliacoes("Muito acessivel", "5 estrelas", 2));
@@ -63,36 +62,37 @@ public class Database {
 
     }
 
-    public Forum addDadoForum(Forum novoForum){
+    public Forum addDadoForum(Forum novoForum) {
         forum.add(novoForum);
         return novoForum;
     }
 
-    public ArrayList<Forum> recuperaDadoForum(){
-        return forum;    
+    public ArrayList<Forum> recuperaDadoForum() {
+        return forum;
     }
 
-    public ArrayList<Forum> recuperaDadoIdPostagem(){
-        return getPostagem(0);    
+    public ArrayList<Forum> recuperaDadoIdPostagem() {
+        return getPostagem(0);
     }
 
     private ArrayList<Forum> getPostagem(int i) {
         return null;
     }
 
-    public void delDadoForum(Forum delForum){
-        forum.remove(delForum);
-    } 
+    public Forum delDadoForum() {
+        forum.remove(forum);
+        return null;
+    }
 
     public void addDadoAtipico(Atipico novoAtipico) {
         atipico.add(novoAtipico);
-    } 
+    }
 
-    public ArrayList<Atipico> recuperaDadoAtipico(){
+    public ArrayList<Atipico> recuperaDadoAtipico() {
         return atipico;
     }
 
-    public void delDadoAtipico(Atipico delAtipico){
+    public void delDadoAtipico(Atipico delAtipico) {
         atipico.remove(delAtipico);
     }
 
@@ -101,62 +101,62 @@ public class Database {
         return novoCadastro;
     }
 
-    public ArrayList<Cadastro> recuperaDadoCadastro(){
+    public ArrayList<Cadastro> recuperaDadoCadastro() {
         return cadastro;
     }
 
-    public void delDadoCdastro(Cadastro delCadastro) {
+    public void delDadoCadastro(Cadastro delCadastro) {
         cadastro.remove(delCadastro);
     }
 
-    public void addDadoCuidador(Cuidador novoCuidador){
+    public void addDadoCuidador(Cuidador novoCuidador) {
         cuidador.add(novoCuidador);
     }
 
-    public ArrayList<Cuidador> recuperaDadoCuidador(){
-        return cuidador;    
+    public ArrayList<Cuidador> recuperaDadoCuidador() {
+        return cuidador;
     }
 
-    public void delDadoCuidador(Cuidador delCuidador){
+    public void delDadoCuidador(Cuidador delCuidador) {
         cuidador.remove(delCuidador);
-    } 
+    }
 
-    public Local addDadoLocal(Local novoLocal){
+    public Local addDadoLocal(Local novoLocal) {
         local.add(novoLocal);
         return novoLocal;
     }
 
-    public ArrayList<Local> recuperaDadoLocal(){
-        return local;    
+    public ArrayList<Local> recuperaDadoLocal() {
+        return local;
     }
 
-    public ArrayList<Local> recuperaDadoIdLocal(){
-        return getLocal(0);    
+    public ArrayList<Local> recuperaDadoIdLocal() {
+        return getLocal(0);
     }
 
     private ArrayList<Local> getLocal(int i) {
         return null;
     }
 
-    public void delDadoLocal(Local delLocal){
+    public void delDadoLocal(Local delLocal) {
         local.remove(delLocal);
-    } 
+    }
 
-    public Avaliacoes addDadoAvaliacoes(Avaliacoes novoAvaliacoes){
+    public Avaliacoes addDadoAvaliacoes(Avaliacoes novoAvaliacoes) {
         avaliacoes.add(novoAvaliacoes);
         return novoAvaliacoes;
     }
 
-    public ArrayList<Avaliacoes> recuperaDadoAvaliacoes(){
-        return avaliacoes;    
+    public ArrayList<Avaliacoes> recuperaDadoAvaliacoes() {
+        return avaliacoes;
     }
 
-    public void delDadoAvaliacoes(Avaliacoes delAvaliacoes){
+    public void delDadoAvaliacoes(Avaliacoes delAvaliacoes) {
         avaliacoes.remove(delAvaliacoes);
-    } 
+    }
 
-    public ArrayList<Avaliacoes> recuperaDadoIdAvaliacao(){
-        return getAvaliacao(0);    
+    public ArrayList<Avaliacoes> recuperaDadoIdAvaliacao() {
+        return getAvaliacao(0);
     }
 
     private ArrayList<Avaliacoes> getAvaliacao(int i) {

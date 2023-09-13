@@ -7,7 +7,6 @@ public class Avaliacoes implements Apresentavel {
     private String comentario;
     private String notaCategoria;
     private int idAvaliacao;
-    
 
     public Avaliacoes(String comentario, String notaCategoria, int idAvaliacao) {
         this.comentario = comentario;
@@ -28,7 +27,5 @@ public class Avaliacoes implements Apresentavel {
         resposta = leitor.nextLine();
         return resposta;
     }
-
-    
 
 }

@@ -7,5 +7,5 @@ interface Apresentavel {
     String exibirDados();
 
     String definirApresentavel();
-    
+
 }
