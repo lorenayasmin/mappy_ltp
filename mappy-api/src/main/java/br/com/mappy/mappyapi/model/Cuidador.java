@@ -7,8 +7,11 @@ public class Cuidador extends Cadastro {
     private Avaliacoes notaCategoria;
     private Avaliacoes comentario;
 
-    public Cuidador(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario) {
-        super(nome, email, assuntoInteresse, senha, categoriaUsuario);
+    public Cuidador(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario,
+            int idCadastro, Avaliacoes notaCategoria, Avaliacoes comentario) {
+        super(nome, email, assuntoInteresse, senha, categoriaUsuario, idCadastro);
+        this.notaCategoria = notaCategoria;
+        this.comentario = comentario;
     }
 
     @Override

@@ -9,13 +9,16 @@ public class Cadastro {
     private String assuntoInteresse;
     private String senha;
     private String categoriaUsuario;
-
-    public Cadastro(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario) {
+    private int idCadastro;
+    
+    public Cadastro(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario,
+            int idCadastro) {
         this.nome = nome;
         this.email = email;
         this.assuntoInteresse = assuntoInteresse;
         this.senha = senha;
         this.categoriaUsuario = categoriaUsuario;
+        this.idCadastro = idCadastro;
     }
 
     public String getNome() {
