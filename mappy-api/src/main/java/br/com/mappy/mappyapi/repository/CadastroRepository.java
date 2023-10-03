@@ -1,4 +1,8 @@
 package br.com.mappy.mappyapi.repository;
 
-public class CadastroRepository <Cadastro, Integer>{
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.mappy.mappyapi.model.Cadastro;
+
+public interface CadastroRepository extends CrudRepository<Cadastro, Integer>{
 }

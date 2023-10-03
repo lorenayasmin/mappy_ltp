@@ -2,22 +2,38 @@ package br.com.mappy.mappyapi.model;
 
 import java.util.Scanner;
 
-public class Cadastro {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
+public class Cadastro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int idCadastro;
     private String nome;
     private String email;
     private String assuntoInteresse;
     private String senha;
     private String categoriaUsuario;
-    private int idCadastro;
 
-    public Cadastro(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario,
-            int idCadastro) {
+    public Cadastro(){      
+    }
+
+    public Cadastro(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario) {
         this.nome = nome;
         this.email = email;
         this.assuntoInteresse = assuntoInteresse;
         this.senha = senha;
         this.categoriaUsuario = categoriaUsuario;
+    }   
+
+    public int getIdCadastro() {
+        return idCadastro;
+    }
+
+    public void setIdCadastro(int idCadastro) {
         this.idCadastro = idCadastro;
     }
 

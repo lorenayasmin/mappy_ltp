@@ -9,7 +9,7 @@ public class Atipico extends Cadastro {
 
     public Atipico(String nome, String email, String assuntoInteresse, String senha, String categoriaUsuario,
             int idCadastro, Avaliacoes notaCategoria, Avaliacoes comentario) {
-        super(nome, email, assuntoInteresse, senha, categoriaUsuario, idCadastro);
+        super(nome, email, assuntoInteresse, senha, categoriaUsuario);
         this.notaCategoria = notaCategoria;
         this.comentario = comentario;
     }

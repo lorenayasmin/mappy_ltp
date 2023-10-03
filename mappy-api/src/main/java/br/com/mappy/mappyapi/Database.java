@@ -48,9 +48,9 @@ public class Database {
         forum.add(new Forum("blablabla", "07/04/2023", "Rotina", "Lorena", 2));
         forum.add(new Forum("blablabla", "18/05/2023", "Acessibilidade", "Victória", 3));
 
-        cadastro.add(new Cadastro("Nycole", "nycole.b@gmail.com", "Importância", "1234", "deficiente visual", 1));
-        cadastro.add(new Cadastro("Thiago", "thiago.p@gmail.com", "Rotina", "1234", "deficiente auditivo", 2));
-        cadastro.add(new Cadastro("Eder", "eder.g@gmail.com", "Acessibilidade", "1234", "deficiente mental", 3));
+        cadastro.add(new Cadastro("Nycole", "nycole.b@gmail.com", "Importância", "1234", "deficiente visual"));
+        cadastro.add(new Cadastro("Thiago", "thiago.p@gmail.com", "Rotina", "1234", "deficiente auditivo"));
+        cadastro.add(new Cadastro("Eder", "eder.g@gmail.com", "Acessibilidade", "1234", "deficiente mental"));
 
         local.add(new Local("Escola", "IFSP", "Rua A", "Ensino de qualidade", 1));
         local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel", 2));
