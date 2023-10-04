@@ -1,6 +1,7 @@
 package br.com.mappy.mappyapi.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -31,8 +32,8 @@ public class LocaisController {
     }
 
     @GetMapping("/api/locais")
-    ArrayList locais() {
-        return LocalDAO.listaLocais;
+    public List<Local> getLocal(){
+        return (List<Local>)locaisRepository.findAll();
     }
 
     @PutMapping("/api/locais/avaliacoes/{id_local}")
