@@ -37,5 +37,10 @@ public class ForumController {
     public Optional<Forum> getPostagem(@PathVariable("id") Integer id_postagem){
       return (Optional<Forum>)forumRepository.findById(id_postagem);
     }
-
+    
+    @PutMapping("/api/forum/postagens")
+    Forum forum() {
+      return (Forum) forumRepository.findAll();
+    }
+  
 }
