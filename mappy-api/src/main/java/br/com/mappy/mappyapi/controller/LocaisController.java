@@ -47,10 +47,9 @@ public class LocaisController {
         return avaliacoesRepository.save(avaliacoes) + "Sua avaliação foi realizada com sucesso";
     }
 
-
     @GetMapping("/api/locais/{id_local}")
-    ArrayList<Local> locais(@PathVariable("id_local") Integer idLocal) {
-        return LocalDAO.getInstance().getById(idLocal);
+    public Optional<Local> getPostagem(@PathVariable("id") Integer id_local){
+      return (Optional<Local>)locaisRepository.findById(id_local);
     }
 
     @PutMapping("/api/locais")
