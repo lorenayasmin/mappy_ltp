@@ -57,4 +57,10 @@ public class LocaisController {
         return (Local) locaisRepository.findAll();
     }
 
+    @PutMapping("/api/locais/avaliacoes/{id_local}")
+    Optional<Avaliacoes> avaliacoes(@PathVariable("id_local") Integer idAvaliacao) {
+        return avaliacoesRepository.findById(idAvaliacao);
+    }
+
+
 }
