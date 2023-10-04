@@ -45,10 +45,8 @@ public class LocaisController {
         return locaisRepository.save(local) + "O novo local foi adicionado com sucesso";
     }
 
-
-
     @PostMapping("/api/locais/avaliacoes")
-    public Avaliacoes createAvaliacao(@RequestBody Avaliacoes avaliacoes) {
+    public String createAvaliacoes(@RequestBody Avaliacoes avaliacoes){
         return avaliacoesRepository.save(avaliacoes) + "Sua avaliação foi realizada com sucesso";
     }
 
