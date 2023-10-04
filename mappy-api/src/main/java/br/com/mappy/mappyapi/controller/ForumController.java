@@ -33,6 +33,11 @@ public class ForumController {
     
   }
 
+  @GetMapping("/api/forum")
+  public List<Forum> getPostagem(){
+      return (List<Forum>)forumRepository.findAll();
+  }
+
   @GetMapping("/api/forum/postagens")
   ArrayList forum1() {
     return ForumDAO.listaPostagens1;
@@ -41,11 +46,6 @@ public class ForumController {
   @DeleteMapping("/api/forum/postagens{id_postagem}")
   public String deleteForum() {
     return ForumDAO.del1 + "A postagem foi deletada";
-  }
-
-  @GetMapping("/api/forum")
-  public List<Forum> getPostagem(){
-      return (List<Forum>)forumRepository.findAll();
   }
 
 }
