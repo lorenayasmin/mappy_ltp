@@ -1,6 +1,7 @@
 package br.com.mappy.mappyapi.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -42,9 +43,9 @@ public class ForumController {
     return ForumDAO.del1 + "A postagem foi deletada";
   }
 
-  @GetMapping("/api/forum/{id_postagem}")
-  ArrayList<Forum> forum(@PathVariable("id_postagem") Integer idPostagem) {
-    return ForumDAO.getInstance().getById(idPostagem);
+  @GetMapping("/api/forum")
+  public List<Forum> getPostagem(){
+      return (List<Forum>)forumRepository.findAll();
   }
 
 }
