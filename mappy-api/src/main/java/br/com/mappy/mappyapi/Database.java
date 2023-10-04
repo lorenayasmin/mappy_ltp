@@ -56,9 +56,9 @@ public class Database {
         local.add(new Local("Lazer", "Lago do taboão", "Rua B", "Local muito agradavel", 2));
         local.add(new Local("Saúde", "Husf", "Rua C", "Hospital de qualidade", 3));
 
-        avaliacoes.add(new Avaliacoes("Local muito bom", "4 estrelas", 1));
-        avaliacoes.add(new Avaliacoes("Muito acessivel", "5 estrelas", 2));
-        avaliacoes.add(new Avaliacoes("Adorei este lugar", "4 estrelas", 3));
+        avaliacoes.add(new Avaliacoes("Local muito bom", "4 estrelas"));
+        avaliacoes.add(new Avaliacoes("Muito acessivel", "5 estrelas"));
+        avaliacoes.add(new Avaliacoes("Adorei este lugar", "4 estrelas"));
 
     }
 
