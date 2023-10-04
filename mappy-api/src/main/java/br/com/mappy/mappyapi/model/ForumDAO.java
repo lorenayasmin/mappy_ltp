@@ -57,7 +57,7 @@ public class ForumDAO {
     public static ArrayList<Forum> listaPostagens = postagem1.getPostagem();
 
     static Database novoForum = new Database();
-    public static Forum postagem2 = novoForum.addDadoForum(new Forum(null, null, null, null, 0));
+    public static Forum postagem2 = novoForum.addDadoForum(new Forum(null, null, null, null));
 
     static Database postagem3 = new Database();
     public static ArrayList<Forum> listaPostagens1 = postagem3.getPostagem();
