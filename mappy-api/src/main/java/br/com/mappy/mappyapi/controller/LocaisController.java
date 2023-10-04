@@ -2,6 +2,7 @@ package br.com.mappy.mappyapi.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -36,11 +37,6 @@ public class LocaisController {
         return (List<Local>)locaisRepository.findAll();
     }
 
-    @PutMapping("/api/locais/avaliacoes/{id_local}")
-    ArrayList<Avaliacoes> avaliacoes(@PathVariable("id_local") Integer idAvaliacao) {
-        return AvaliacoesDAO.getInstance().getById(idAvaliacao);
-    }
-
     @PostMapping("/api/locais")
     public String createLocal(@RequestBody Local local) {
         return locaisRepository.save(local) + "O novo local foi adicionado com sucesso";
@@ -58,8 +54,8 @@ public class LocaisController {
     }
 
     @PutMapping("/api/locais")
-    ArrayList locais4() {
-        return LocalDAO.listaLocais;
+    Local locais4() {
+        return (Local) locaisRepository.findAll();
     }
 
 }

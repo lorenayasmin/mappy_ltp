@@ -23,11 +23,6 @@ public class ForumController {
    @Autowired
     ForumRepository forumRepository;
 
-  @PutMapping("/api/forum/postagens")
-  ArrayList forum() {
-    return ForumDAO.listaPostagens;
-  }
-
   @PostMapping("/api/forum/postagens")
   public Forum createForum(@RequestBody Forum forum) {
     return forumRepository.save(forum);    
@@ -42,10 +37,5 @@ public class ForumController {
     public Optional<Forum> getPostagem(@PathVariable("id") Integer id_postagem){
       return (Optional<Forum>)forumRepository.findById(id_postagem);
     }
-
-  @DeleteMapping("/api/forum/postagens{id_postagem}")
-  public String deleteForum() {
-    return ForumDAO.del1 + "A postagem foi deletada";
-  }
 
 }
