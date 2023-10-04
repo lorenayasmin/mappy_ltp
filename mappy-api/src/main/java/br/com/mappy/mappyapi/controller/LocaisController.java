@@ -13,11 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.mappy.mappyapi.model.Avaliacoes;
-import br.com.mappy.mappyapi.model.AvaliacoesDAO;
 import br.com.mappy.mappyapi.model.Local;
-import br.com.mappy.mappyapi.model.LocalDAO;
 import br.com.mappy.mappyapi.repository.AvaliacoesRepository;
 import br.com.mappy.mappyapi.repository.LocaisRepository;
 

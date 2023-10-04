@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.mappy.mappyapi.model.Forum;
-import br.com.mappy.mappyapi.model.ForumDAO;
 import br.com.mappy.mappyapi.repository.CadastroRepository;
 import br.com.mappy.mappyapi.repository.ForumRepository;
 
@@ -37,6 +35,13 @@ public class ForumController {
     public Optional<Forum> getPostagem(@PathVariable("id") Integer id_postagem){
       return (Optional<Forum>)forumRepository.findById(id_postagem);
     }
+
+    @DeleteMapping("/api/forum/postagens{id_postagem}")
+  Forum deleteForum(@PathVariable Integer id_postagem) {
+    forumRepository.deleteById(id_postagem);
+    return (Forum) forumRepository.findAll();
+  }
+
     
     @PutMapping("/api/forum/postagens")
     Forum forum() {
