@@ -58,7 +58,7 @@ public class LocalDAO {
     public static ArrayList<Local> listaLocais = local1.getLocal();
 
     static Database novoLocal = new Database();
-    public static Local local2 = novoLocal.addDadoLocal(new Local(null, null, null, null, 0));
+    public static Local local2 = novoLocal.addDadoLocal(new Local(null, null, null, null));
 
     static Database novoAvaliacoes = new Database();
     public static Avaliacoes avaliacao2 = novoAvaliacoes.addDadoAvaliacoes(null);

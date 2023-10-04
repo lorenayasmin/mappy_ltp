@@ -17,12 +17,14 @@ import br.com.mappy.mappyapi.model.AvaliacoesDAO;
 import br.com.mappy.mappyapi.model.Local;
 import br.com.mappy.mappyapi.model.LocalDAO;
 import br.com.mappy.mappyapi.repository.AvaliacoesRepository;
+import br.com.mappy.mappyapi.repository.LocaisRepository;
 
 @RestController
 @CrossOrigin
 public class LocaisController {
     @Autowired
     AvaliacoesRepository avaliacoesRepository;
+    LocaisRepository locaisRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(LocaisController.class, args);
@@ -39,9 +41,10 @@ public class LocaisController {
     }
 
     @PostMapping("/api/locais")
-    public String novoLocal() {
-        return LocalDAO.local2 + "O novo local foi adicionado com sucesso";
+    public String createLocal(@RequestBody Local local) {
+        return locaisRepository.save(local) + "O novo local foi adicionado com sucesso";
     }
+
 
 
     @PostMapping("/api/locais/avaliacoes")

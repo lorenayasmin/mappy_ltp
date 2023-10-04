@@ -1,5 +1,10 @@
 package br.com.mappy.mappyapi.repository;
 
-public class LocaisRepository {
-    
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.mappy.mappyapi.model.Local;
+
+public interface LocaisRepository extends CrudRepository<Local, Integer>{
+   
 }
+
