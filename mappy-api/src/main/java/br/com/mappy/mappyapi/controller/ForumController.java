@@ -2,6 +2,7 @@ package br.com.mappy.mappyapi.controller;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,10 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mappy.mappyapi.model.Forum;
 import br.com.mappy.mappyapi.model.ForumDAO;
+import br.com.mappy.mappyapi.repository.CadastroRepository;
 import br.com.mappy.mappyapi.repository.ForumRepository;
 
 @RestController
 public class ForumController {
+   @Autowired
+    ForumRepository forumRepository;
 
   @PutMapping("/api/forum/postagens")
   ArrayList forum() {
