@@ -2,6 +2,7 @@ package br.com.mappy.mappyapi.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -29,8 +30,7 @@ public class ForumController {
 
   @PostMapping("/api/forum/postagens")
   public Forum createForum(@RequestBody Forum forum) {
-    return forumRepository.save(forum);
-    
+    return forumRepository.save(forum);    
   }
 
   @GetMapping("/api/forum")
@@ -38,10 +38,10 @@ public class ForumController {
       return (List<Forum>)forumRepository.findAll();
   }
 
-  @GetMapping("/api/forum/postagens")
-  ArrayList forum1() {
-    return ForumDAO.listaPostagens1;
-  }
+  @GetMapping("/api/forum/{id_postagem}")
+    public Optional<Forum> getPostagem(@PathVariable("id") Integer id_postagem){
+      return (Optional<Forum>)forumRepository.findById(id_postagem);
+    }
 
   @DeleteMapping("/api/forum/postagens{id_postagem}")
   public String deleteForum() {
