@@ -2,8 +2,6 @@ package br.com.mappy.mappyapi;
 
 import java.util.ArrayList;
 
-import br.com.mappy.mappyapi.model.Cuidador;
-import br.com.mappy.mappyapi.model.Atipico;
 import br.com.mappy.mappyapi.model.Avaliacoes;
 import br.com.mappy.mappyapi.model.Cadastro;
 import br.com.mappy.mappyapi.model.Forum;
@@ -13,8 +11,6 @@ import br.com.mappy.mappyapi.model.Local;
 public class Database {
     private ArrayList<Forum> forum;
     private ArrayList<Cadastro> cadastro;
-    private ArrayList<Atipico> atipico;
-    private ArrayList<Cuidador> cuidador;
     private ArrayList<Local> local;
     private ArrayList<Avaliacoes> avaliacoes;
 
@@ -37,8 +33,6 @@ public class Database {
     public Database() {
         forum = new ArrayList<>();
         cadastro = new ArrayList<>();
-        atipico = new ArrayList<>();
-        cuidador = new ArrayList<>();
         local = new ArrayList<>();
         avaliacoes = new ArrayList<>();
     }
@@ -84,18 +78,6 @@ public class Database {
         return null;
     }
 
-    public void addDadoAtipico(Atipico novoAtipico) {
-        atipico.add(novoAtipico);
-    }
-
-    public ArrayList<Atipico> recuperaDadoAtipico() {
-        return atipico;
-    }
-
-    public void delDadoAtipico(Atipico delAtipico) {
-        atipico.remove(delAtipico);
-    }
-
     public Cadastro addDadoCadastro(Cadastro novoCadastro) {
         cadastro.add(novoCadastro);
         return novoCadastro;
@@ -109,17 +91,6 @@ public class Database {
         cadastro.remove(delCadastro);
     }
 
-    public void addDadoCuidador(Cuidador novoCuidador) {
-        cuidador.add(novoCuidador);
-    }
-
-    public ArrayList<Cuidador> recuperaDadoCuidador() {
-        return cuidador;
-    }
-
-    public void delDadoCuidador(Cuidador delCuidador) {
-        cuidador.remove(delCuidador);
-    }
 
     public Local addDadoLocal(Local novoLocal) {
         local.add(novoLocal);
@@ -162,4 +133,5 @@ public class Database {
     private ArrayList<Avaliacoes> getAvaliacao(int i) {
         return null;
     }
+
 }
