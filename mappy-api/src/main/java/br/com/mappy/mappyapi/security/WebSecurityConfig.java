@@ -22,29 +22,31 @@ import br.com.mappy.mappyapi.security.service.NossaUserDetailService;
 
 public class WebSecurityConfig {
 
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-        // .requiresChannel(
-        //         channel -> channel.anyRequest().requiresSecure())
-                .authorizeHttpRequests(
-                        authorize -> authorize
-                                .requestMatchers(HttpMethod.POST, "/criar").permitAll()
-                                .requestMatchers(HttpMethod.GET, "/livre").permitAll())
-                .authorizeHttpRequests(
-                        authorize -> authorize.requestMatchers(HttpMethod.GET, "/dados").authenticated())
-                .httpBasic(Customizer.withDefaults())
-;
-        return http.build();
-    }
+        @Bean
+        public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+                http.csrf().disable()
+                                // .requiresChannel(
+                                // channel -> channel.anyRequest().requiresSecure())
+                                .authorizeHttpRequests(
+                                                authorize -> authorize
+                                                                .requestMatchers(HttpMethod.POST, "/criarUsuario")
+                                                                .permitAll()
+                                                                .requestMatchers(HttpMethod.GET, "/livreAcesso")
+                                                                .permitAll())
+                                .authorizeHttpRequests(
+                                                authorize -> authorize.requestMatchers(HttpMethod.GET,
+                                                                "/dados").authenticated())
+                                .httpBasic(Customizer.withDefaults());
+                return http.build();
+        }
 
-    @Bean
-    public UserDetailsService nossaUserDetailsService() {
-        return new NossaUserDetailService();
-    }
+        @Bean
+        public UserDetailsService nossaUserDetailsService() {
+                return new NossaUserDetailService();
+        }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-            return new BCryptPasswordEncoder();    
-    }
+        @Bean
+        public PasswordEncoder passwordEncoder() {
+                return new BCryptPasswordEncoder();
+        }
 }

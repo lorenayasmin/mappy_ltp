@@ -21,12 +21,12 @@ public class UsuarioController {
         return "Dados retornados com sucesso";
     }
 
-    @GetMapping("/livre")
+    @GetMapping("/livreAcesso")
     public String naoPrecisaDeLogin(@RequestBody Usuario user){
         return "Acessado sem login";
     }
 
-    @PostMapping("/criar")
+    @PostMapping("/criarUsuario")
     public String criarUsuario(@RequestBody Usuario novoUser){
         novoUser.setPassword(
             passwordEncoder.encode(novoUser.getPassword()) 
