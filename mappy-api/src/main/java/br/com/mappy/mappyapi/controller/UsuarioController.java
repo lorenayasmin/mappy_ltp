@@ -16,13 +16,14 @@ public class UsuarioController {
 
     @Autowired
     PasswordEncoder passwordEncoder;
+
     @GetMapping("/dados")
     public String getDados(){
         return "Dados retornados com sucesso";
     }
 
     @GetMapping("/livreAcesso")
-    public String naoPrecisaDeLogin(@RequestBody Usuario user){
+    public String semLogin(@RequestBody Usuario user){
         return "Acessado sem login";
     }
 
