@@ -50,4 +50,4 @@ jobs:
           app-name: 'spring-Mappy-api'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA5BE709AB7A4B4F8DDDB1388532F5D2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84838991FDCF4921ACDD0FE0DE3861D8 }}
